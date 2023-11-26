@@ -1,0 +1,11 @@
+version: '3'
+services:
+  singlenode:
+    container_name: singlenode
+    image: ravendb/ravendb:5.3-ubuntu-latest
+    ports:
+      - 8080:8080
+      - 38888:38888
+    environment:
+      - RAVEN_License_Eula_Accepted=true
+      - RAVEN_Setup_Mode=None
